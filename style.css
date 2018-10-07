@@ -1,24 +1,58 @@
 #main-doc {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "b a a"
-        "b c c";
+    height: 100%;
+    width: 100%;
+    grid-template-areas: 
+        "a"
+        "b"
+        "c";
 }
 
 #banner {
     grid-area: a;
+    margin-left: 12.5em;
+}
+
+#nav-title {
+    grid-row: 1 /2;
+}
+
+#nav-header {
+    grid-row: 2 / 3;
+    grid-row-gap: 20px;
 }
 
 #navbar {
     display: grid;
     grid-area: b;
+    position: fixed;
+    width: auto;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+.nav-link {
+    height: 2em;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    padding-right: 5px;
+
+}
+
+.nav-link:hover {
+    color: gray;
 }
 
 #main-section {
     display: grid;
     grid-area: c;
+}
+
+#main-body {
+    margin-left: 12.5em;
 }
 
 #banner-title {
