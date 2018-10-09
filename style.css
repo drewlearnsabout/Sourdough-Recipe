@@ -1,3 +1,7 @@
+body {
+    font-family: 'Source Serif Pro', serif;
+}
+
 #main-doc {
     display: grid;
     grid-template-columns: 1fr;
@@ -12,16 +16,17 @@
 
 #banner {
     grid-area: a;
-    margin-left: 12.5em;
+    margin-left: 16em;
 }
 
 #nav-title {
     grid-row: 1 /2;
+    text-align: center;
 }
 
 #nav-header {
     grid-row: 2 / 3;
-    grid-row-gap: 20px;
+    grid-row-gap: 30px;
 }
 
 #navbar {
@@ -29,8 +34,10 @@
     grid-area: b;
     position: fixed;
     width: auto;
-    overflow-y: auto;
-    border: 1px solid black;
+    height: 100%;
+    overflow-y: scroll;
+    border-right: 2px solid rgb(163, 163, 163);
+    background: rgba(186, 206, 216, 0.123);
 }
 
 .nav-link {
@@ -38,12 +45,13 @@
     list-style-type: none;
     text-decoration: none;
     color: black;
-    padding-right: 5px;
-
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-bottom: 7px;
 }
 
 .nav-link:hover {
-    color: gray;
+    color: rgb(202, 147, 28);
 }
 
 #main-section {
@@ -52,17 +60,58 @@
 }
 
 #main-body {
-    margin-left: 12.5em;
+    margin-left: 16em;
 }
 
 #banner-title {
-    background: url(https://www.sbs.com.au/food/sites/sbs.com.au.food/files/styles/full/public/basic-sourdough-loaf-1.jpg?itok=WToKtNKY);
-    height: 300px;
-    width:100%;
+    background: url(http://www.pullinsbakers.co.uk/wp-content/uploads/2015/03/products-banner-1060x347.jpg);
+    height: 40%;
+    width:99%;
     background-repeat: no-repeat;
+    text-align: right;
+    text-justify: center;
+    color: rgb(255, 255, 255);
+    font-size: 4em;
+    box-shadow: 2px 2px 2px gray;
 }
 
 #nav-header {
     display: grid;
     grid-template-columns: 1fr;
+}
+
+@media (max-width:676px) {
+    #navbar {
+        position: static;
+        overflow-y: visible;
+        border: 2px solid rgb(163, 163, 163);
+    }
+
+    #nav-header {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 15px;
+    }
+
+    #banner {
+        margin-left: 0em;
+    }
+
+    #banner-title {
+        height: 30%;
+    }
+
+    #main-body {
+        margin-left: 0em;
+    }
+
+    .nav-link {
+        height: 0em;
+        justify-self: center;
+        font-size: 12px;
+    }
+
+    .main-section h2 {
+        justify-self: center;
+    }
 }
