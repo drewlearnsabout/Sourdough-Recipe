@@ -42,6 +42,10 @@ body {
     animation-duration: 0.7s;
 }
 
+#byAuthor {
+    font-size: 0.3em;
+}
+
 #nav-title {
     grid-row: 1 /2;
     text-align: center;
@@ -92,6 +96,14 @@ body {
 #main-body {
     margin-left: 16em;
     padding: 1em;
+}
+
+#recipeBy {
+    display: grid;
+    justify-items: right;
+    font-weight: bold;
+    padding: 1em;
+    background: rgba(0 , 0, 0, 0.4);
 }
 
 
