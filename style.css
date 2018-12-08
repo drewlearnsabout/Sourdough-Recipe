@@ -30,7 +30,6 @@ body {
 }
 
 #banner-title {
-    width: 100%;
     background: rgba(0 , 0, 0, 0.4);
     padding: 1em 0 1em 0;
     display: grid;
@@ -39,9 +38,8 @@ body {
     color: white;
     font-size: 3em;
     text-shadow: 1px 1px 2px black;
-    animation-name: fadeIn;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
+    animation-name: fadeIn1;
+    animation-duration: 0.7s;
 }
 
 #nav-title {
@@ -50,6 +48,7 @@ body {
 }
 
 #nav-header {
+    padding: 0 10px 0 10px;
     grid-row-gap: 30px;
     display: grid;
 }
@@ -62,7 +61,7 @@ body {
     overflow-y: scroll;
     border-right: 2px solid rgb(163, 163, 163);
     background: rgba(186, 206, 216, 1);
-    animation-name: fadeIn;
+    animation-name: fadeIn2;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
@@ -133,9 +132,32 @@ body {
     }
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn1 {
     0% {
+        width: 0%;
+        top: 0;
+        left: -250;
         opacity: 0.2;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+@keyframes fadeIn2 {
+    0% {
+        opacity: 0.0;
+    }
+
+    50% {
+        opacity: 0.0;
     }
     90% {
         opacity: 1;
