@@ -1,177 +1,292 @@
 body {
-    font-family: 'Noto Serif TC', serif;
     margin: 0 auto;
-}
-
-#main-doc {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 100%;
     width: 100%;
-    grid-template-areas: 
-        "a"
-        "b";
 }
 
-.links a {
-    color: rgb(202, 147, 28);
-}
-
-#banner {
-    grid-area: a;
-    margin: 0 0 2em 0;
-    padding: 2em 0 2em 0;
-    background: url("Bread\ Banner.jpg");
+header {
     width: 100%;
-    height: 25em;
+    height: 600px;
+    background: url("audio-microphone-radio-484.jpg");
     background-size: cover;
-    box-shadow: 2px 2px 2px gray;
 }
 
-#banner-title {
-    background: rgba(0 , 0, 0, 0.4);
-    padding: 1em 0 1em 0;
+#headerBlock {
+    padding-top: 11em;
     display: grid;
     justify-items: center;
-    align-items: center;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+#headerBlock h1 {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    justify-content: center;
+    padding: 1em 0 1em 0;
     color: white;
     font-size: 3em;
-    text-shadow: 1px 1px 2px black;
-    animation-name: fadeIn1;
-    animation-duration: 0.7s;
-}
-
-#byAuthor {
-    font-size: 0.3em;
-}
-
-#nav-title {
-    grid-row: 1 /2;
-    text-align: center;
-}
-
-#nav-header {
-    padding: 0 10px 0 10px;
-    grid-row-gap: 30px;
-    display: grid;
-}
-
-#navbar {
-    grid-area: b;
-    position: fixed;
-    width: auto;
-    height: 100%;
-    overflow-y: scroll;
-    border-right: 2px solid rgb(163, 163, 163);
-    background: rgba(186, 206, 216, 1);
-    animation-name: fadeIn2;
+    z-index: 0;
+    background: rgba(0, 0, 0, 0.4);
+    animation-name: swipeRight;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
-.nav-link {
+#socialIcons {
+    animation-name: delay;
+    animation-duration: 2.5s;
+}
+
+.socialIconSize {
     height: 2em;
-    list-style-type: none;
-    text-decoration: none;
-    color: black;
-    padding-right: 7px;
-    padding-left: 7px;
-    padding-bottom: 7px;
-    font-family: 'Niramit', sans-serif;
+    width: 2em;
+}
+.socialIconSize:hover {
+    animation-name: resize;
+    animation-duration: 1s;
 }
 
-.nav-link:hover {
-    color: rgb(202, 147, 28);
-}
-
-.main-section {
-    grid-area: b;
-}
-
-.main-section p {
-    font-family: 'Noto Serif TC', serif;
-}
-
-#main-body {
-    margin-left: 16em;
-    padding: 1em;
-}
-
-#recipeBy {
+nav {
     display: grid;
-    justify-items: right;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.4);
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.navbar {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar:hover {
+    animation-name: resize;
+    font-weight: bold;
+    animation-duration: 1s;
+    color: rgb(255, 81, 0);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#aboutSection {
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    justify-items: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Montserrat', sans-serif;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#aboutSection h2 {
+    padding-top: 1em;
+}
+
+#aboutSection p {
     font-weight: bold;
     padding: 1em;
-    background: rgba(0 , 0, 0, 0.4);
+    margin: 5em;
+    overflow: hidden;
 }
 
-
-
-@media (max-width:650px) {
-    #navbar {
-        position: static;
-        overflow-y: visible;
-        border: 2px solid rgb(163, 163, 163);
-    }
-
-    #nav-header {
-        display:grid;
-        grid-template-columns: 1fr 1fr;
-        padding-bottom: 15px;
-    }
-
-    #banner {
-        margin-left: 0em;
-    }
-
-    #banner-title {
-        height: 30%;
-    }
-
-    #main-body {
-        margin-left: 0em;
-    }
-
-    .nav-link {
-        height: 0em;
-        justify-self: center;
-        font-size: 12px;
-    }
-
-    .main-section h2 {
-        justify-self: center;
-    }
+#myModal2 {
+    width: 100%;
 }
 
-@keyframes fadeIn1 {
+#contactSection {
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    display: grid;
+    justify-items: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Montserrat', sans-serif;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+#contact_me {
+    display: grid;
+    grid-row-gap: 0.2em;
+}
+
+#contact_me_class {
+    display: grid;
+}
+
+#contact_me p {
+    text-align: center;
+}
+
+form button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    width: 100%;
+    padding: 1em 0 1em 0;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#podcasts {
+    margin: 1em;
+    display: grid;
+    grid-gap: 2em 1em;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(23em, 1fr));
+}
+
+#podcastTiles {
+    display: grid;
+    max-width: 20em;
+    justify-items: center;
+}
+
+.collapsible {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    width: 22.5em;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+.collapsible:hover {
+    font-weight: bold;
+    color: rgb(255, 81, 0);
+}
+
+.collapsible:after {
+    content: url("down-arrow.png");
+}
+
+.active:after {
+    content: url("up-arrow.png");
+}
+
+.content {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    max-height: 0;
+    max-width: 22em;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.close {
+    font-size: 2em;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+}
+
+/* Continue creating the modal class 
+to hide and display the about content */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 7.5em 0 0 0;
+    left: 0;
+    top: 0;
+}
+
+@keyframes swipeRight {
     0% {
         width: 0%;
         top: 0;
-        left: -250;
-        opacity: 0.2;
-        transform: rotate(0deg);
+        left: -150;
+        opacity: 0.0;
+        font-size: 0.5em;
     }
-
     50% {
-        opacity: 1;
+        width: 70%;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0.5;
     }
-
+    75% {
+        width: 40%;
+        font-size: 0.7em;
+    }
     100% {
         width: 100%;
-        top: 0;
         left: 0;
+        opacity: 1;
+        font-size: 2em;
     }
 }
-@keyframes fadeIn2 {
+
+@keyframes resize {
+    0% {
+        transform: scale(1);
+    }
+    15% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.2;
+    }
+    15% {
+        opacity: 1;
+    }
+}
+
+@keyframes delay {
     0% {
         opacity: 0.0;
     }
-
-    50% {
+    70% {
         opacity: 0.0;
     }
-    90% {
+    100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    #headerBlock h1 {
+        font-size: 1.5em;
+    }
+
+    nav {
+        justify-items: left;
+        padding: 2em;
+    }
+
+    #podcastTiles {
+        max-width: 16em;
+    }
+
+    .collapsible {
+        max-width: 18em;
+    }
+    .content {
+        max-width: 18em;
     }
 }
